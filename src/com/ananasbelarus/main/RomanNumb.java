@@ -60,11 +60,21 @@ public class RomanNumb {
     public String IntToRoman(int dec) throws WrongRomanNumb
     {
         String res = "";
-        if(dec<=0){throw new WrongRomanNumb("Не существует эквивалентного данному");}
+        /*if(dec<=0){throw new WrongRomanNumb("Не существует эквивалентного данному");}
         while (dec-100>=0){res+="С";dec-=100;}
         while (dec-50>=0){res+="L";dec-=50;}
         while (dec-10>=0){res+="X";dec-=10;}
         while (dec-5>=0){res+="V";dec-=5;}
+        while (dec-1>=0){res+="I";dec--;}
+         */
+        while (dec-100>=0){res+="С";dec-=100;}
+        if (dec>90){res+="XC"; res+=IntToRoman(dec-90);dec=0;}
+        while (dec-50>=0){res+="L";dec-=50;}
+        if (dec>40){res+="XL"; res+=IntToRoman(dec-40);dec=0;}
+        while (dec-10>=0){res+="X";dec-=10;}
+        if (dec==9){res+="IX";dec=0;}
+        while (dec-5>=0){res+="V";dec-=5;}
+        if (dec==9){res+="IV";dec=0;}
         while (dec-1>=0){res+="I";dec--;}
         return res;
     }
