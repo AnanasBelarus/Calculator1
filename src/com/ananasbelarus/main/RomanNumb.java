@@ -61,7 +61,7 @@ public class RomanNumb {
     {
         String res = "";
         if(dec<=0){throw new WrongRomanNumb("Не существует эквивалентного данному");}
-        while (dec-100>=0){res+="D";dec-=100;}
+        while (dec-100>=0){res+="С";dec-=100;}
         while (dec-50>=0){res+="L";dec-=50;}
         while (dec-10>=0){res+="X";dec-=10;}
         while (dec-5>=0){res+="V";dec-=5;}
