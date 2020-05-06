@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws Errors.ErrorFirstDec , Errors.ErrorFormat, Errors.ErrorRoman {
         System.out.println("Введите пример");
         Scanner scanner = new Scanner(System.in);
-        while (true){String name = scanner.nextLine()+"˧ ";
-        System.out.println(Calculator.doSimpleAction(name));}
+        String name = scanner.nextLine()+"˧ ";
+        System.out.println(Calculator.doSimpleAction(name));
     }
 }
