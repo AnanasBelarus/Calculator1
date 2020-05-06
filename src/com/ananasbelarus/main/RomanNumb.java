@@ -8,7 +8,7 @@ public class RomanNumb {
             super(errorMess);
         }
     }
-    private static String array[] = {"I","II","III","IV","V","VI","VII","VIII","iX","X"};
+    private static String array[] = {"I","II","III","IV","V","VI","VII","VIII","IX","X"};
     public static boolean isRoman(char ch)
     {
         switch (ch)

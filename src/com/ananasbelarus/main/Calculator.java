@@ -229,11 +229,11 @@ public  class Calculator {
                     //System.out.println("D1");
                     if (RomanNumb.isRoman(c)) {
                         roman = roman + Character.toString(c);
-                    }else if(c==' ' )
+                    }else if(c==' ')
                     {
                         try {
                             a = rn.convertToInt(roman);
-                    State = enumState.G;}
+                            State = enumState.G;}
                         catch (RomanNumb.WrongRomanNumb e){State = enumState.Error;
                             error = Errors.enumErrors.ErrorRoman;
                         }
@@ -332,6 +332,7 @@ public  class Calculator {
                 default:
                     return null;
             }
+            //System.out.println(c);
             point++;
         }
         return null;
